@@ -31,7 +31,33 @@ export const Footer: React.FC<FooterProps> = ({
   onShareApp,
 }) => {
   return (
-    <footer className="bg-[#4a0817] text-amber-100/90 pt-10 pb-24 border-t-4 border-amber-500">
+    <footer className="bg-royal-maroon text-amber-100/90 pt-10 pb-28 border-t-4 border-[#D4AF37]">
+      {/* Wedding & Festive discount highlight strip */}
+      <div className="bg-[#691415] border-b border-amber-500/30 py-3 px-4 -mt-10 mb-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-2 text-xs sm:text-sm">
+          <div className="flex items-center gap-2">
+            <span className="text-xl">🎁</span>
+            <span className="font-bold text-amber-200">
+              {lang === 'hi'
+                ? 'शादी-बरात व सामूहिक उपहार के लिए विशेष छूट एवं थोक पैकेज उपलब्ध हैं'
+                : 'Special discounts & bulk packages available for weddings & celebrations'}
+            </span>
+          </div>
+          <a
+            href={`https://wa.me/${config.whatsapp.rawNumber}?text=${encodeURIComponent(
+              lang === 'hi'
+                ? 'नमस्ते, मुझे शादी व सामूहिक उपहार के लिए थोक चूड़ियों की छूट के बारे में जानकारी चाहिए।'
+                : 'Hello, I want to inquire about bulk wedding discounts on bangles.'
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-lg text-xs"
+          >
+            <span>{lang === 'hi' ? 'व्हाट्सएप पर छूट जानें' : 'Get Bulk Quote'}</span>
+          </a>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-xs sm:text-sm">

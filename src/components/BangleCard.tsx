@@ -44,12 +44,12 @@ export const BangleCard: React.FC<BangleCardProps> = ({
   return (
     <article
       onClick={() => onQuickView(item)}
-      className="group relative bg-white rounded-2xl border-2 border-amber-900/15 hover:border-[#800020] shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden cursor-pointer"
+      className="group relative bg-white rounded-2xl border-2 border-amber-900/15 hover:border-[#D4AF37] hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden cursor-pointer"
     >
       {/* Top Banner Badges */}
       <div className="absolute top-2.5 left-2.5 z-20 flex flex-col gap-1">
         {item.isBestSeller && (
-          <span className="inline-flex items-center gap-1 bg-[#800020] text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded-full shadow border border-amber-400/40">
+          <span className="inline-flex items-center gap-1 bg-[#691415] text-amber-200 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md border border-amber-400/50">
             <Sparkles className="w-2.5 h-2.5 text-yellow-400" />
             <span>{lang === 'hi' ? 'लोकप्रिय' : 'Bestseller'}</span>
           </span>
@@ -82,11 +82,11 @@ export const BangleCard: React.FC<BangleCardProps> = ({
 
       {/* Compact Rajasthani Jharokha Arch Frame for Photography */}
       <div className="relative w-full pt-[82%] bg-[#FFFDF7] p-2 overflow-hidden flex items-center justify-center">
-        {/* Jharokha arch shape container */}
-        <div className="absolute inset-2 rounded-t-[2.5rem] rounded-b-xl overflow-hidden border-2 border-amber-700/20 bg-stone-100 flex items-center justify-center shadow-inner">
+        {/* Jharokha arch shape container with scalloped gold rim */}
+        <div className="absolute inset-2 rounded-t-[2.75rem] rounded-b-xl overflow-hidden border-2 border-amber-600/30 group-hover:border-[#D4AF37] bg-stone-100 flex items-center justify-center shadow-inner transition-colors">
           {/* Shisha / Mirror work corner accents */}
-          <div className="absolute top-1 left-2 w-2 h-2 rounded-full bg-amber-300 border border-amber-600/30 z-10 opacity-70" />
-          <div className="absolute top-1 right-2 w-2 h-2 rounded-full bg-amber-300 border border-amber-600/30 z-10 opacity-70" />
+          <div className="absolute top-1.5 left-2.5 w-2.5 h-2.5 rounded-full bg-yellow-200 border border-amber-600/50 z-10 opacity-80 shadow-xs" />
+          <div className="absolute top-1.5 right-2.5 w-2.5 h-2.5 rounded-full bg-yellow-200 border border-amber-600/50 z-10 opacity-80 shadow-xs" />
 
           {/* Lazy loaded image */}
           <img

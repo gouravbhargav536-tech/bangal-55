@@ -31,16 +31,29 @@
 }
 
 .pb-bottom-bar {
-  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Authentic Royal Rajasthani Background with Subtle Gold Jaali / Paisley Texture */
+.bg-royal-maroon {
+  background-color: #7f1a1b;
+  background-image: 
+    radial-gradient(circle at 12px 12px, rgba(212, 175, 55, 0.12) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 24px 24px, rgba(245, 194, 82, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.bg-dark-maroon {
+  background-color: #691415;
 }
 
 /* Custom Rajasthani Lehariya subtle wavy line pattern */
 .bg-lehariya-pattern {
-  background-color: #800020;
+  background-color: #7f1a1b;
   background-image: repeating-linear-gradient(
     -45deg,
-    rgba(255, 215, 0, 0.08) 0px,
-    rgba(255, 215, 0, 0.08) 12px,
+    rgba(212, 175, 55, 0.1) 0px,
+    rgba(212, 175, 55, 0.1) 12px,
     transparent 12px,
     transparent 24px
   );
@@ -58,7 +71,6 @@
   background-color: #fdfbf7;
   background-image: radial-gradient(#d97706 0.4px, transparent 0.4px);
   background-size: 18px 18px;
-  background-opacity: 0.15;
 }
 
 /* Traditional Rajasthani Jharokha arch frame */
