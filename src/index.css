@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-rajasthani: 'Rozha One', 'Yatra One', 'Martel', serif;
+    --font-heading: 'Martel', 'Rozha One', serif;
+    --font-body: 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-royal {
+    font-family: var(--font-rajasthani);
+  }
+}
+
+/* Safe Area Insets for Mobile devices (Notch, home indicator) */
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
+}
+
+.safe-top {
+  padding-top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+}
+
+.pb-bottom-bar {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Custom Rajasthani Lehariya subtle wavy line pattern */
+.bg-lehariya-pattern {
+  background-color: #800020;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 215, 0, 0.08) 0px,
+    rgba(255, 215, 0, 0.08) 12px,
+    transparent 12px,
+    transparent 24px
+  );
+}
+
+.bg-bandhani-dots {
+  background-color: #70061e;
+  background-image: radial-gradient(rgba(251, 191, 36, 0.22) 1.5px, transparent 1.5px),
+                    radial-gradient(rgba(244, 63, 94, 0.25) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.bg-cream-sand {
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#d97706 0.4px, transparent 0.4px);
+  background-size: 18px 18px;
+  background-opacity: 0.15;
+}
+
+/* Traditional Rajasthani Jharokha arch frame */
+.jharokha-arch {
+  border-top-left-radius: 50% 32px;
+  border-top-right-radius: 50% 32px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative;
+}
+
+/* Hide scrollbar for horizontal categories while keeping smooth scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
